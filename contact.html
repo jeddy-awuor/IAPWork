@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<script>
+function submitForm() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var comments = document.getElementById('comments').value;
+  
+  // Display a thank you message
+  alert('Thank you, ' + name + '! Your feedback has been received.');
+  
+  // Clear the form fields
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('comments').value = '';
+  
+  // Prevent form from submitting to the server
+  return false;
+}
+</script>
+<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="works.html">about us</a></li>
+            <li><a href="contact.html">contact us</a></li>
+        </ul>
+    </nav>
+    <div class="form">
+        <div>
+            <img src="images/malalaorg.jpg" alt="" style="padding: 5px; margin-top: 10px;">
+        </div>
+        <div class="form-inner"> 
+        <h1 id="Feedback">Feedback Form</h1>
+
+<form onsubmit="return submitForm();">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br><br>
+  
+  <label for="comments">Comments:</label><br>
+  <textarea id="comments" name="comments" required style="height: 100px;"></textarea><br><br>
+  
+  <input type="submit" value="Submit">
+</form>
+        </div>
+        <div>
+            <img src="images/malalafund.jpg" alt="" style="padding: 10px; margin-top: 45px;">
+        </div>
+    </div>
+<footer>
+    <div class="foot-out">
+     <div class="inner-foot">
+      <div class="in-touch">
+    <h3>Get In Touch</h3>
+    <ul>
+        <a href="#"> <li>Instagram</li></a>
+        <a href="#"><li>Facebook</li></a>
+        <a href="#"><li>Youtube</li></a>
+        <a href="#"><li>Linkedin</li></a>
+    </ul>
+    </div>
+     <div class="direction">
+      <h3>Contact Info</h3>
+      <h4>Daladala Rd,Ayany , Nairobi 56010 <br>
+         +254 710 388 141 <br>
+        jeddy@gmail.com</h4>
+     </div>
+    </div>
+    </div>
+  </footer>
+  <div id="credits"> <a href="index.html">Home</a> | <a href="contact.html">Contact</a> | <a href="works.html">Works</a> | &copy; 2023 Anyone | Design by <a href="#"> jeddyawuor</a> </div>
+</body>
+</html>
